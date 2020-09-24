@@ -9,6 +9,8 @@
 
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Alpine -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
         .font-family-karla { font-family: karla; }
@@ -233,6 +235,42 @@
             </footer>
         </div>
         
+    </div>
+
+    <!-- Modal -->
+    <div x-data="{ open: false }" 
+        x-init="() => { setTimeout(() => { open = true }, 1500); }" 
+        x-show.transition.duration.500ms="open" 
+        class="fixed inset-0 w-full h-screen flex items-center justify-center bg-white bg-opacity-75 px-4 md:px-0"
+    >
+        <div class="flex flex-col w-full max-w-lg bg-white shadow-lg rounded-lg border-4 border-gray-400 p-4" @click.away="open = false">
+            <div class="flex justify-between mb-6">
+                <h3 class="font-bold text-2xl">Welcome! 🚀</h3>
+                <button @click="open = false">
+                    <svg version="1.1" id="Capa_1" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+                                    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+                                    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+                                    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+                                    L284.286,256.002z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <p class="text-center mb-8">Check out my code alongs where I build these templates! ⬇️</p>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/juoVjGCUmoY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="pt-6 pb-2">
+                <form action="https://www.youtube.com/channel/UC93OBzp6xqQ2y02m7PUhGAA">
+                    <button type="submit" class="bg-blue-500 text-white font-bold rounded-lg w-full hover:bg-blue-600 hover:shadow-xl py-3">Go To Channel 😁</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!-- AlpineJS -->
