@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-admin-template",
+  "version": "1.0.0",
+  "description": "This is an admin dashboard template buit with [Tailwind](https://tailwindcss.com/) and [Alpine.js](https://github.com/alpinejs/alpine). This is inspired by the dribbble shots of [Vishnu Prasad](https://dribbble.com/shots/11085023-Medical-Dashboard) and [Filip Justić](https://dribbble.com/shots/10965359-Workly-My-Tasks-List).",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/styles.css --watch",
+    "prod": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/styles.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgrzyb/tailwind-admin-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidgrzyb/tailwind-admin-template/issues"
+  },
+  "homepage": "https://github.com/davidgrzyb/tailwind-admin-template#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
